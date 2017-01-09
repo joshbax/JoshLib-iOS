@@ -8,12 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		03766C971E242F5700081ABA /* JoshLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 03766C951E242F5700081ABA /* JoshLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03766CAB1E242FE600081ABA /* Date+FormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA21E242FE600081ABA /* Date+FormatType.swift */; };
+		03766CAC1E242FE600081ABA /* AsyncTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA31E242FE600081ABA /* AsyncTasks.swift */; };
+		03766CAD1E242FE600081ABA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA41E242FE600081ABA /* LocationManager.swift */; };
+		03766CAE1E242FE600081ABA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA51E242FE600081ABA /* Log.swift */; };
+		03766CAF1E242FE600081ABA /* OrientationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA61E242FE600081ABA /* OrientationManager.swift */; };
+		03766CB01E242FE600081ABA /* SystemVolumeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA71E242FE600081ABA /* SystemVolumeButton.swift */; };
+		03766CB11E242FE600081ABA /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA81E242FE600081ABA /* UIKitExtensions.swift */; };
+		03766CB21E242FE600081ABA /* UIDevice+ModelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA91E242FE600081ABA /* UIDevice+ModelName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03766C921E242F5700081ABA /* JoshLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JoshLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03766C951E242F5700081ABA /* JoshLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JoshLib.h; sourceTree = "<group>"; };
 		03766C961E242F5700081ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03766CA21E242FE600081ABA /* Date+FormatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+FormatType.swift"; sourceTree = "<group>"; };
+		03766CA31E242FE600081ABA /* AsyncTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTasks.swift; sourceTree = "<group>"; };
+		03766CA41E242FE600081ABA /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		03766CA51E242FE600081ABA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		03766CA61E242FE600081ABA /* OrientationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientationManager.swift; sourceTree = "<group>"; };
+		03766CA71E242FE600081ABA /* SystemVolumeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemVolumeButton.swift; sourceTree = "<group>"; };
+		03766CA81E242FE600081ABA /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		03766CA91E242FE600081ABA /* UIDevice+ModelName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+ModelName.swift"; sourceTree = "<group>"; };
+		03766CB51E243B5700081ABA /* DateFormat.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DateFormat.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +47,9 @@
 		03766C881E242F5700081ABA = {
 			isa = PBXGroup;
 			children = (
-				03766C941E242F5700081ABA /* JoshLib */,
+				03766CB41E243B5700081ABA /* Playgrounds */,
+				03766CA11E242FE600081ABA /* Source */,
+				03766C941E242F5700081ABA /* Support Files */,
 				03766C931E242F5700081ABA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +62,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		03766C941E242F5700081ABA /* JoshLib */ = {
+		03766C941E242F5700081ABA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				03766C951E242F5700081ABA /* JoshLib.h */,
 				03766C961E242F5700081ABA /* Info.plist */,
 			);
+			name = "Support Files";
 			path = JoshLib;
+			sourceTree = "<group>";
+		};
+		03766CA11E242FE600081ABA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				03766CA21E242FE600081ABA /* Date+FormatType.swift */,
+				03766CA31E242FE600081ABA /* AsyncTasks.swift */,
+				03766CA41E242FE600081ABA /* LocationManager.swift */,
+				03766CA51E242FE600081ABA /* Log.swift */,
+				03766CA61E242FE600081ABA /* OrientationManager.swift */,
+				03766CA71E242FE600081ABA /* SystemVolumeButton.swift */,
+				03766CA81E242FE600081ABA /* UIKitExtensions.swift */,
+				03766CA91E242FE600081ABA /* UIDevice+ModelName.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		03766CB41E243B5700081ABA /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				03766CB51E243B5700081ABA /* DateFormat.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03766CB21E242FE600081ABA /* UIDevice+ModelName.swift in Sources */,
+				03766CAB1E242FE600081ABA /* Date+FormatType.swift in Sources */,
+				03766CAC1E242FE600081ABA /* AsyncTasks.swift in Sources */,
+				03766CAE1E242FE600081ABA /* Log.swift in Sources */,
+				03766CAF1E242FE600081ABA /* OrientationManager.swift in Sources */,
+				03766CB01E242FE600081ABA /* SystemVolumeButton.swift in Sources */,
+				03766CB11E242FE600081ABA /* UIKitExtensions.swift in Sources */,
+				03766CAD1E242FE600081ABA /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +342,7 @@
 				03766C9C1E242F5700081ABA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
