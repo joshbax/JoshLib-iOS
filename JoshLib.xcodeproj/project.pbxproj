@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		03766C971E242F5700081ABA /* JoshLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 03766C951E242F5700081ABA /* JoshLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03766CAB1E242FE600081ABA /* Date+FormatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA21E242FE600081ABA /* Date+FormatType.swift */; };
-		03766CAC1E242FE600081ABA /* AsyncTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA31E242FE600081ABA /* AsyncTasks.swift */; };
 		03766CAD1E242FE600081ABA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA41E242FE600081ABA /* LocationManager.swift */; };
 		03766CAE1E242FE600081ABA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA51E242FE600081ABA /* Log.swift */; };
 		03766CAF1E242FE600081ABA /* OrientationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA61E242FE600081ABA /* OrientationManager.swift */; };
 		03766CB01E242FE600081ABA /* SystemVolumeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA71E242FE600081ABA /* SystemVolumeButton.swift */; };
 		03766CB11E242FE600081ABA /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA81E242FE600081ABA /* UIKitExtensions.swift */; };
 		03766CB21E242FE600081ABA /* UIDevice+ModelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA91E242FE600081ABA /* UIDevice+ModelName.swift */; };
+		03766CB61E24458200081ABA /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03766CA31E242FE600081ABA /* Dispatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		03766C951E242F5700081ABA /* JoshLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JoshLib.h; sourceTree = "<group>"; };
 		03766C961E242F5700081ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03766CA21E242FE600081ABA /* Date+FormatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+FormatType.swift"; sourceTree = "<group>"; };
-		03766CA31E242FE600081ABA /* AsyncTasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTasks.swift; sourceTree = "<group>"; };
+		03766CA31E242FE600081ABA /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
 		03766CA41E242FE600081ABA /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		03766CA51E242FE600081ABA /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		03766CA61E242FE600081ABA /* OrientationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrientationManager.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				03766CA21E242FE600081ABA /* Date+FormatType.swift */,
-				03766CA31E242FE600081ABA /* AsyncTasks.swift */,
+				03766CA31E242FE600081ABA /* Dispatch.swift */,
 				03766CA41E242FE600081ABA /* LocationManager.swift */,
 				03766CA51E242FE600081ABA /* Log.swift */,
 				03766CA61E242FE600081ABA /* OrientationManager.swift */,
@@ -176,12 +176,12 @@
 			files = (
 				03766CB21E242FE600081ABA /* UIDevice+ModelName.swift in Sources */,
 				03766CAB1E242FE600081ABA /* Date+FormatType.swift in Sources */,
-				03766CAC1E242FE600081ABA /* AsyncTasks.swift in Sources */,
 				03766CAE1E242FE600081ABA /* Log.swift in Sources */,
 				03766CAF1E242FE600081ABA /* OrientationManager.swift in Sources */,
 				03766CB01E242FE600081ABA /* SystemVolumeButton.swift in Sources */,
 				03766CB11E242FE600081ABA /* UIKitExtensions.swift in Sources */,
 				03766CAD1E242FE600081ABA /* LocationManager.swift in Sources */,
+				03766CB61E24458200081ABA /* Dispatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
