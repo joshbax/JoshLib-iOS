@@ -85,7 +85,7 @@ struct Log {
     }
     
     @available(iOS 10.0, *)
-    fileprivate static let _os_log : OSLog = OSLog(subsystem: "co.momentlens.MomentCaseConnector", category: "CaseConnectorTestApp")
+    fileprivate static let _os_log : OSLog = OSLog(subsystem: "YOUR_SUBSYSTEM_HERE", category: "YOUR_CATEGORY_HERE")
     
     fileprivate init() {
     }
