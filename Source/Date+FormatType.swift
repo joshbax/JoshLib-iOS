@@ -44,7 +44,7 @@ extension Date {
         } else {
             dateFormatter.dateFormat = formatType.formatString
         }
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.locale = locale
         return dateFormatter.string(from: self)
     }
     
