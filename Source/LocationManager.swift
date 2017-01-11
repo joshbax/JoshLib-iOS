@@ -1,7 +1,9 @@
 import Foundation
 import CoreLocation
 
-
+/**
+CoreLocation wrapper for ease of use 
+**/
 public class LocationManager {
     
     fileprivate let _locationManager : CLLocationManager = CLLocationManager()

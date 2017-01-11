@@ -2,6 +2,14 @@ import Foundation
 import AVFoundation
 import CoreMotion
 
+/**
+Uses the accelerometer to determine device orientation rather than relying on UIKit. 
+This is useful when the user has toggled Portrait lock on their iPhone and we need to know if the device is in landscape
+
+One use is case is properly saving photos in landscape mode when user has portrait lock enabled.
+ 
+Conveniently provides image orientation, interface orientation, device, and raw rotation/transformation values 
+**/
 public class OrientationManager {
 
     fileprivate let _motionManager = CMMotionManager()

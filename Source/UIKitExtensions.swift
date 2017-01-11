@@ -2,6 +2,11 @@ import Foundation
 
 extension UIButton {
     
+    /**
+        For some reason Apple never provided an API to change a button's background color dependent on
+        the button state (disabled, enabled, selected etc). So we use create one by using the background image
+        API filled with a one pixel repeated image.
+     */
     func setBackgroundColor(_ color: UIColor, forControlState controlState: UIControlState) {
         let colorImage = UIImage.onePixel(withColor: color)
         setBackgroundImage(colorImage, for: controlState)
@@ -33,6 +38,9 @@ extension ViewCornerMasking {
     }
 }
 
+/**
+ Createes a button with rounded corners without using the problematic layer.cornerRadius. This is just an example.
+ **/
 class ButtonCornerMask : UIButton , ViewCornerMasking {
     
     var maskingCorners : UIRectCorner { return UIRectCorner.allCorners }
@@ -51,9 +59,11 @@ class ButtonCornerMask : UIButton , ViewCornerMasking {
 }
 
 
-
 extension UIImage {
     
+    /**
+     Creates a one pixel image from specified color
+     **/
     static func onePixel(withColor color: UIColor) -> UIImage? {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedLast.rawValue)

@@ -28,6 +28,13 @@ fileprivate let _concurrentQueue : DispatchQueue = {
 }()
 
 
+/**
+
+GCD wrapper to serial and concurrent queues. 
+Designed to reduce repeated code and nesting hell. 
+ 
+Also prevents redundant dispatch when target queue is the same as the calling queue. 
+**/
 public class Dispatch {
     
     public typealias Task = ()->()
@@ -106,19 +113,17 @@ public class Dispatch {
         }
     }
     
+    private static func runCompletionHandler(_ completionHandler: (Dispatch.Task)? = nil) {
+        guard let completionHandler = completionHandler else { return }
+        Dispatch.main(task: completionHandler)
+    }
+    
     public static func async(on queue: Dispatch.Queue = Dispatch.Queue.serial, withDelay asyncDelay: TimeInterval = 0, task: @escaping Dispatch.Task, then completionHandler: (Dispatch.Task)? = nil ) {
         Dispatch.execute(as: Dispatch.TaskType.async, on: queue, withDelay: asyncDelay, task: task, then: completionHandler)
     }
     
     public static func sync(on queue: Dispatch.Queue = Dispatch.Queue.serial, task: @escaping Dispatch.Task, then completionHandler: (Dispatch.Task)? = nil ) {
         Dispatch.execute(as: Dispatch.TaskType.sync, on: queue, task: task, then: completionHandler)
-    }
-
-    
-    
-    private static func runCompletionHandler(_ completionHandler: (Dispatch.Task)? = nil) {
-        guard let completionHandler = completionHandler else { return }
-        Dispatch.main(task: completionHandler)
     }
     
     public static func serially(task: @escaping Dispatch.Task, then completionHandler: (Dispatch.Task)? = nil) {

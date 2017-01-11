@@ -1,14 +1,9 @@
-//
-//  UIDevice+Platform.swift
-//  Moment Lens
-//
-//  Created by Josh Baxley on 2/12/16.
-//  Copyright © 2016 Moment Lens. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
+/**
+ I didn't write this code but it's nice to have. 
+ **/
 public extension UIDevice {
     
     var modelName: String {

@@ -50,12 +50,12 @@ func testSerialQueue() {
     Dispatch.serially(task: taskOne)
 
     Dispatch.seriallySync(task: {
-        print("This will block until task one compeletes")
+        print("This will block until task one completes")
     })
     
     Dispatch.serially(task: taskTwo)
     
-    Dispatch.seriallySync(task: {
+    Dispatch.serially(task: {
         print("Serial queues do not need barriers. This is called last.")
     }, then: {
         print("And this is where you update the main thread!")

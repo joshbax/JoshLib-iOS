@@ -2,6 +2,8 @@ import Foundation
 import AVFoundation
 import MediaPlayer
 
+/* Takes control of System Volume Button
+ */
 protocol SystemVolumeButtonObservable {
     
     var volumeView : MPVolumeView! { get}

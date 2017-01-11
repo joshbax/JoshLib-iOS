@@ -1,5 +1,8 @@
 import Foundation
 
+/**
+ Conveneince date extension for handling common date formats.
+**/
 public enum DateFormatType {
     case iso8601
     case littleEndian
@@ -12,7 +15,7 @@ public enum DateFormatType {
         switch self {
         case .iso8601: return "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         case .littleEndian: return "dd-MM-yyyy"
-        case .sortable: return "yyyyMMddHHmmssSSS"
+        case .sortable: return "yyyyMMddHHmmssSSS" //aka Messy BigEndian
         case .short: return "M/d/yy"
         case .medium: return "MMM d, yyyy"
         case .full: return "EEEE, MMMM d, yyyy"

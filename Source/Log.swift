@@ -2,6 +2,12 @@ import Foundation
 import os
 import os.log
 
+/*
+
+ Output to system console.app (Requires MacOS Sierra or higher)
+ 
+*/
+
 func LogVerbose(_ message: Any, _ path: String = #file, _ function: String = #function, line: Int = #line) {
     Log.sharedInstance.log(LogType.verbose, message: message, path: path, function: function, line: line)
 }
