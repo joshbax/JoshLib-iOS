@@ -67,6 +67,7 @@ public class Dispatch {
     }
   
     public static func execute(as taskType: Dispatch.TaskType, on queue: Dispatch.Queue, withDelay asyncDelay: TimeInterval = 0, task: @escaping Dispatch.Task, then completionHandler: (Dispatch.Task)? = nil ) {
+        let dispatchQueue = queue.dispatchQueue
         
         let taskBlock = {
             task()
@@ -89,17 +90,17 @@ public class Dispatch {
             
             switch  taskType {
             case .sync:
-                queue.dispatchQueue.sync(execute: taskBlock)
+                dispatchQueue.sync(execute: taskBlock)
             case .async:
                 
                 if asyncDelay > 0 {
-                    queue.dispatchQueue.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(asyncDelay * 1000)), execute: taskBlock)
+                    dispatchQueue.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.milliseconds(Int(asyncDelay * 1000)), execute: taskBlock)
                 } else {
-                    queue.dispatchQueue.async(execute: taskBlock)
+                    dispatchQueue.async(execute: taskBlock)
                 }
                 
             case .barrierAsync:
-                queue.dispatchQueue.async(flags: DispatchWorkItemFlags.barrier, execute: taskBlock)
+                dispatchQueue.async(flags: DispatchWorkItemFlags.barrier, execute: taskBlock)
 
             }
         }
@@ -136,12 +137,12 @@ public class Dispatch {
         Dispatch.sync(on: Dispatch.Queue.concurrent, task: task, then: completionHandler)
     }
     
-    public func concurrentBarrier(_ task: @escaping ()->(), onComplete completionHandler: (()->())? = nil) {
+    public static func concurrentBarrier(task: @escaping Dispatch.Task, then completionHandler: (Dispatch.Task)? = nil) {
         Dispatch.execute(as: Dispatch.TaskType.barrierAsync, on: Dispatch.Queue.concurrent, task: task, then: completionHandler)
     }
     
-    public static func main(task: @escaping Dispatch.Task) {
-        Dispatch.async(on: Dispatch.Queue.main, task: task)
+    public static func main(withDelay asyncDelay: TimeInterval = 0, task: @escaping Dispatch.Task) {
+        Dispatch.async(on: Dispatch.Queue.main, withDelay: asyncDelay, task: task)
     }
     
     public static func isCurrentQueue(equalTo queue: Dispatch.Queue) -> Bool {

@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0312A2CB1E25C0B20084A7FE /* DispatchPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DispatchPlayground.playground; sourceTree = "<group>"; };
 		03766C921E242F5700081ABA /* JoshLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JoshLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03766C951E242F5700081ABA /* JoshLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JoshLib.h; sourceTree = "<group>"; };
 		03766C961E242F5700081ABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		03766CB41E243B5700081ABA /* Playgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				0312A2CB1E25C0B20084A7FE /* DispatchPlayground.playground */,
 				03766CB51E243B5700081ABA /* DateFormat.playground */,
 			);
 			path = Playgrounds;
